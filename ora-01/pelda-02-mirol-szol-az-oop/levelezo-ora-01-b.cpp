@@ -4,7 +4,7 @@
 #include <iostream>
 #include <string>
 
-#include "person.h";
+#include "person.h"
 
 // proceduralis programozas:
 // 1. utasitasok
@@ -24,11 +24,14 @@ int main()
     //std::string names[2];
     //int ages[2];
 
-    Person p1;
-    p1.init("Kiss Petra", 15);
-    Person p2;
-    p2.init("Nagy Pista", 23);
+    Person p1("Kiss Petra", 15, "AK29823", false);
+    //p1.init("Kiss Petra", 15);
+    Person p2("Nagy Pista", 23, "NP28723", true);
+    //p2.init("Nagy Pista", 23);
 
-    std::cout << "Person1: " << p1.name << " age: " << p1.age << std::endl;
-    std::cout << "Person2: " << p2.name << " age: " << p2.age << std::endl;
+    p1.print();
+    p2.print();
+
+    //std::cout << "Person1: " << p1.getName() << " age: " << p1.getAge() << std::endl;
+    //std::cout << "Person2: " << p2.getName() << " age: " << p2.getAge() << std::endl;
 }

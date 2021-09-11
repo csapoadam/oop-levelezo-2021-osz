@@ -1,5 +1,7 @@
+#include <iostream>
 #include <string>
-#include "person.h";
+
+#include "person.h"
 
 // ODR - one definition rule:
 // minden fv csak 1x lehet definialva
@@ -8,6 +10,15 @@
 // a.) 1 forras fajlban van 2x definialva (akar ugy, hogy headerbol szarmazik az egyik definicio): compiler (fordito) szol
 // b.) 2 kulon forrasfajlban, akkor a linker tud szolni
 
+
+void Person::print() {
+	std::cout << "Person: " << name << " age: " << age;
+	std::cout << ", ID number: " << nid.getNum();
+	if (nid.isBiometric()) {
+		std::cout << " - biometric";
+	}
+	std::cout << std::endl;
+}
 
 //void Person::init (std::string n, int a) {
 //    name = n;
