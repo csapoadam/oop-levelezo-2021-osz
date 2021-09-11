@@ -24,11 +24,10 @@ int main()
     //std::string names[2];
     //int ages[2];
 
-    Person p1{ "Kiss Petra", 15 };
-    Person p2{ "Nagy Pista", 23};
-
-    p2.name = "adkjfaekejraedf";
-    p2.age = -1;
+    Person p1;
+    p1.init("Kiss Petra", 15);
+    Person p2;
+    p2.init("Nagy Pista", 23);
 
     std::cout << "Person1: " << p1.name << " age: " << p1.age << std::endl;
     std::cout << "Person2: " << p2.name << " age: " << p2.age << std::endl;
